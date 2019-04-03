@@ -13,7 +13,7 @@ import java.lang.reflect.Proxy;
  * @DATE: 2019/3/29.
  */
 public class ProxyTest {
-//    @Test
+    @Test
     public void test2() {
         //创建一个实例对象，这个对象是被代理的对象
         Person zhangsan = new Student("张三");
@@ -31,8 +31,9 @@ public class ProxyTest {
     @Test
     public void test() {
         byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy0", Student.class.getInterfaces());
-        String path = "G:\\code\\myself\\daily-exer\\src\\test\\java\\com\\proxy\\StuProxyTest.class";
+        String path = "G:\\code\\myself\\lin_exer\\target\\test-classes\\com\\exer\\proxy\\StuProxyTest.class";
 
+//        generateClassFile
         try(FileOutputStream fos = new FileOutputStream(path)) {
             fos.write(classFile);
             fos.flush();
