@@ -18,6 +18,10 @@ public class Person {
         System.out.println("Person name: "+ name);
         System.out.println("Person age:" + age);
     }
+    //构造方法
+    public Person(String name) {
+        System.out.println("Person name:" + name);
+    }
 
     //私有方法
     private void say() {
