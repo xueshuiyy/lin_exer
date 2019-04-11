@@ -33,8 +33,10 @@ public class ProxyTest {
         byte[] classFile = ProxyGenerator.generateProxyClass("$Proxy0", Student.class.getInterfaces());
         String path = "G:\\code\\myself\\lin_exer\\target\\test-classes\\com\\exer\\proxy\\StuProxyTest.class";
 
-//        generateClassFile
-        try(FileOutputStream fos = new FileOutputStream(path)) {
+        byte[] personClassFile = ProxyGenerator.generateProxyClass("$Proxy0", Person.class.getInterfaces());
+        String path1 = "G:\\code\\myself\\lin_exer\\target\\test-classes\\com\\exer\\proxy\\PersonProxyTest.class";
+
+        try(FileOutputStream fos = new FileOutputStream(path1)) {
             fos.write(classFile);
             fos.flush();
             System.out.println("代理类class文件写入成功");

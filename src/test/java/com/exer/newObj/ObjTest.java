@@ -2,6 +2,7 @@ package com.exer.newObj;
 
 import com.exer.aop.Student;
 import org.junit.Test;
+import org.springframework.asm.Handle;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +17,7 @@ import java.lang.reflect.InvocationTargetException;
 public class ObjTest {
 
     @Test
-    public void test() throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, CloneNotSupportedException, IOException {
+    public void test() throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         // 方式1,直接new
         /*Book book = new Book("红楼梦", "曹雪芹");*/
 
@@ -27,6 +28,12 @@ public class ObjTest {
         Constructor<Book> bookConstructor  = (Constructor<Book>) c1.getConstructor(String.class, String.class);
         Book book1 = bookConstructor.newInstance("红楼梦", "曹雪芹");
 
+        try {
+            System.out.println("try");
+            throw new Exception("");
+        } catch (Exception e) {
+//            throw new Exception("");
+        }
         // 方式2.2，用constructor的newinstance，
         /*Constructor<Book> bookConstructor = Book.class.getConstructor(String.class, String.class);
         Book book2 = bookConstructor.newInstance("红楼梦", "曹雪芹");
