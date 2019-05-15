@@ -1,20 +1,16 @@
 package com.exer.pattern.strategy;
 
+import lombok.Data;
+import lombok.Setter;
+
 /**
  * Created by Administrator on 2019/5/13.
  */
+@Setter
 public class ShareContext {
 
     protected ShareImg shareImg;
     protected ShareUrl shareUrl;
-
-    public void setShareImg(ShareImg shareImg) {
-        this.shareImg = shareImg;
-    }
-
-    public void setShareUrl(ShareUrl shareUrl) {
-        this.shareUrl = shareUrl;
-    }
 
     public void getImg() {
         shareImg.share();

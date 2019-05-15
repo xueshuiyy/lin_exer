@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class WxShareUrl implements ShareUrl {
 
-    @Value("${share.wechat.url}")
+    @Value("${share.url}")
     public String url;
 
     @Override
     public void share() {
-        System.out.println("wx sharing url:" + url);
+        System.out.println("wx sharing url");
     }
 }

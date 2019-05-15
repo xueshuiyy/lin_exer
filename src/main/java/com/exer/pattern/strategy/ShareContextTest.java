@@ -1,11 +1,11 @@
 package com.exer.pattern.strategy;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Created by Administrator on 2019/5/13.
  */
-@SpringBootApplication
 public class ShareContextTest {
 
     public static void main(String[] args) {
