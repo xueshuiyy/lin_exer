@@ -6,17 +6,18 @@ package com.exer.exam;
  * @Date: 2019/2/16
  */
 public class A {
-    private String v1 = initV1();
     private static final String v2 = new A().initV2();
+//    private static final String v2 = initV2();
+    private String v1 = initV1();
     private final String v3 = initV3();
-
-    {
-        System.out.println("1");
-    }
 
     static {
         System.out.println("2");
     }
+    {
+        System.out.println("1");
+    }
+
 
     public String initV1() {
         System.out.println("3");
@@ -49,11 +50,18 @@ public class A {
         String a = "WOWO";
         String aa = "WOWO";
         System.out.println(A==a);
-        System.out.println(A==new String("a"));
+        System.out.println(A==new String("WOWO"));
         System.out.println(new Integer(128) == new Integer(128));
 
         long b = 1;
         short c = 1;
         System.out.println(b==c);
+
+
+        String m = "taobao";
+        String n = "tao";
+        String o = "bao";
+        System.out.println(m == (n+o));
+
     }
 }

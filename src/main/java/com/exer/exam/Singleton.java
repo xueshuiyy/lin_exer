@@ -17,7 +17,7 @@ public class Singleton {
     }*/
 
     /**
-     * 方式二：性能不高?
+     * 方式二：饿汉模式
      */
     private static Singleton singleton = new Singleton();
 
@@ -26,7 +26,8 @@ public class Singleton {
     }
 
 /**
- * 方式三：双检锁
+ * 方式三：双检锁，
+ * 缺点：对性能要求高
  */
     /*private volatile static Singleton singleton;
     public static Singleton getInstance() {

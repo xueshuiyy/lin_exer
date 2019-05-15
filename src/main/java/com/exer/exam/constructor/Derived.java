@@ -23,4 +23,6 @@ public class Derived extends Base{
     public static void main(String[] args){
         new Derived();
     }
+
 }
+

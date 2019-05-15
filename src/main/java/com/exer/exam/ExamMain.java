@@ -27,20 +27,24 @@ public class ExamMain {
 //        AbstractTest t1 = new AbstractTest();
 
 //        String test = "12";
-        System.out.println(testFinally());
+        System.out.println("main方法结果：" + testFinally());
     }
 
     // finally 会覆盖
-    public static String testFinally() {
+    public static int testFinally() {
+        int a = 1;
         try {
-            return "1";
-
+            a++;
+            System.out.println("a=" + a);
+            return a;
         } catch (Exception e) {
 
         } finally {
-            return "2";
+            a++;
+            System.out.println("a=" + a);
+//            return "2";
         }
-
+        return a;
     }
     static void pong() {
 
